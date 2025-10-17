@@ -4,7 +4,8 @@
 
 <script setup lang="ts">
   import { useWindowSize } from '@vueuse/core';
-  import { onMounted, onUnmounted, ref, Ref } from 'vue';
+  import { onMounted, onUnmounted, ref } from 'vue';
+  import type { Ref } from 'vue';
   import { activateMagneto, resetMagneto } from '@/animations';
 
   const props = defineProps({

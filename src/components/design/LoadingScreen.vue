@@ -54,7 +54,9 @@
 
 <script setup lang="ts">
   import { useWindowSize } from '@vueuse/core';
-  import { computed, onMounted, Ref, ref, watch } from 'vue';
+  import { computed, onMounted, ref, watch } from 'vue';
+  import type { Ref } from 'vue';
+
   import {
     animateLoadingPath,
     animateLoadingText,
