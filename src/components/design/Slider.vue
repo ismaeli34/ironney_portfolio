@@ -268,7 +268,7 @@ import { useWindowSize } from '@vueuse/core';
       profile: saurav,
     },
     {
-      quote: 'Working with Ronney on the Axon website has been an exceptional experience. His invaluable support and dedication were crucial in bringing this project to life. Thank you, Ebraheem!',
+      quote: 'Working with Ronney on the Miracle Center Church website has been an exceptional experience. His invaluable support and dedication were crucial in bringing this project to life. Thank you, Ronney!',
       author: 'Pastor Prince Edos',
       position: 'Founder of Miracle Center Church',
       tags: ['Web Development', 'SEO'],
