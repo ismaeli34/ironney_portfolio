@@ -83,7 +83,8 @@
       });
     }
 
-    const itemWidth = items[0].clientWidth;
+    const itemWidth = items[0]?.clientWidth ?? 0;
+
     const totalWidth = itemWidth * items.length * cloneCount;
 
     // Set initial position based on direction

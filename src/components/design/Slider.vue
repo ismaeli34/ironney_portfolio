@@ -15,13 +15,13 @@
             v-html="computedQuote"
           ></p>
           <div id="quote-author" class="heading-6 mb-6 font-semibold">
-            <p>{{ people[index].author }}</p>
-            <p class="text-flax-smoke-400">{{ people[index].position }}</p>
+            <p>{{ people[index]?.author }}</p>
+            <p class="text-flax-smoke-400">{{ people[index]?.position }}</p>
           </div>
           <div id="quote-tags" class="flex gap-3">
             <p
               class="border-flax-smoke-500 text-flax-smoke-600 rounded-full border px-3 uppercase"
-              v-for="i in people[index].tags"
+              v-for="i in people[index]?.tags"
               :key="i"
             >
               {{ i }}
@@ -58,13 +58,13 @@
         <img
           :class="{ hidden: index !== 0 }"
           class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
-          :src="people[0].profile"
+          :src="people[0]?.profile"
           alt=""
         />
         <img
           :class="{ hidden: index !== 1 }"
           class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
-          :src="people[1].profile"
+          :src="people[1]?.profile"
           alt=""
         />
         <div
@@ -137,7 +137,7 @@ import { useWindowSize } from '@vueuse/core';
   const { width } = useWindowSize();
   const isSmallScreen = computed(() => width.value < 640);
   const computedQuote = computed(() => {
-    return textSplitterIntoChar(`" ${people[index.value].quote} "`);
+    return textSplitterIntoChar(`" ${people[index.value]?.quote} "`);
   });
 
   const canClick = ref(true);
