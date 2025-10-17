@@ -15,16 +15,17 @@
             v-html="computedQuote"
           ></p>
           <div id="quote-author" class="heading-6 mb-6 font-semibold">
-            <p>{{ people[index.value]?.author }}</p>
-            <p class="text-flax-smoke-400">{{ people[index.value]?.position }}</p>
-
+            <p>{{ people[index].author }}</p>
+            <p class="text-flax-smoke-400">{{ people[index].position }}</p>
+          </div>
+          <div id="quote-tags" class="flex gap-3">
             <p
-                v-for="i in people[index.value]?.tags ?? []"
-                :key="i"
+              class="border-flax-smoke-500 text-flax-smoke-600 rounded-full border px-3 uppercase"
+              v-for="i in people[index].tags"
+              :key="i"
             >
               {{ i }}
             </p>
-
           </div>
         </div>
 
@@ -55,16 +56,17 @@
         class="columns-gap relative order-first col-span-full flex h-[60vh] w-full items-start justify-center overflow-clip max-sm:order-last lg:order-last lg:col-span-6 lg:h-full"
       >
         <img
-            :class="{ hidden: index.value !== 0 }"
-            :src="people[0]?.profile"
-            alt=""
+          :class="{ hidden: index !== 0 }"
+          class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
+          :src="people[0].profile"
+          alt=""
         />
         <img
-            :class="{ hidden: index.value !== 1 }"
-            :src="people[1]?.profile"
-            alt=""
+          :class="{ hidden: index !== 1 }"
+          class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
+          :src="people[1].profile"
+          alt=""
         />
-
         <div
           id="quote-overlay"
           class="bg-flax-smoke-500 absolute inset-0 z-50 rounded-lg"
@@ -127,15 +129,16 @@
 import { pastor, saurav} from '@/assets/images';
   import { Button } from '../common';
 import {computed, onMounted, ref} from 'vue';
+
 import { useWindowSize } from '@vueuse/core';
   import { textSplitterIntoChar } from '@/functions';
   import gsap from 'gsap';
 
   const { width } = useWindowSize();
   const isSmallScreen = computed(() => width.value < 640);
-const computedQuote = computed(() => {
-  return textSplitterIntoChar(`" ${people[index.value]?.quote ?? ''} "`);
-});
+  const computedQuote = computed(() => {
+    return textSplitterIntoChar(`" ${people[index.value].quote} "`);
+  });
 
   const canClick = ref(true);
 
@@ -256,7 +259,7 @@ const computedQuote = computed(() => {
 
   // data
   const index = ref(0);
-  const people =ref<Person[]>( [
+  const people = [
     {
       quote: 'Ronney from starting of the task was very attentive towards it , to achieve the goals on time and perfection for the work assigned to him, Also he learnt the skills of python programming with ease and in short period of time and gradually start to implement them for our task.',
       author: 'Saurav Pahuja',
@@ -271,13 +274,5 @@ const computedQuote = computed(() => {
       tags: ['Web Development', 'SEO'],
       profile: pastor,
     },
-  ]);
-
-interface Person {
-  quote: string;
-  author: string;
-  position: string;
-  tags: string[];
-  profile: string;
-}
+  ];
 </script>
