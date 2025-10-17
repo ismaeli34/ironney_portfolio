@@ -116,7 +116,7 @@
   import { computed, onBeforeMount, onMounted, ref, useTemplateRef } from 'vue';
   import gsap from 'gsap';
   import { useWindowSize } from '@vueuse/core';
-  import {work1, work2, airbnb, work3, work4, work5, quizapp, SDA, OutfitOrbit, hyperlocal} from '@/assets/videos';
+  import { work2, airbnb, quizapp, SDA, OutfitOrbit, hyperlocal} from '@/assets/videos';
   import { workBg1, workBg2, workBg3, workBg4, workBg5 } from '@/assets/images';
   const videoRefs = useTemplateRef<HTMLVideoElement[]>('videoRefs');
 

@@ -126,10 +126,9 @@
 </template>
 
 <script setup lang="ts">
-import {esmail, pastor, saurav} from '@/assets/images';
+import { pastor, saurav} from '@/assets/images';
   import { Button } from '../common';
-  import { computed, onMounted } from 'vue';
-import type { Ref } from 'vue';
+import {computed, onMounted, ref} from 'vue';
 import { useWindowSize } from '@vueuse/core';
   import { textSplitterIntoChar } from '@/functions';
   import gsap from 'gsap';
