@@ -40,6 +40,8 @@
             <p class="h-0.5 w-full bg-black"></p>
             <p>{{ people.length }}</p>
           </div>
+
+
           <div
             class="lg:absolute lg:inset-0 lg:-bottom-10 lg:w-full lg:will-change-scroll"
           >
@@ -66,6 +68,25 @@
           class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
           :src="people[1]?.profile"
           alt=""
+        />
+
+        <img
+            :class="{ hidden: index !== 2 }"
+            class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
+            :src="people[2]?.profile"
+            alt=""
+        />
+        <img
+            :class="{ hidden: index !== 3 }"
+            class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
+            :src="people[3]?.profile"
+            alt=""
+        />
+        <img
+            :class="{ hidden: index !== 4 }"
+            class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
+            :src="people[4]?.profile"
+            alt=""
         />
         <div
           id="quote-overlay"
@@ -126,7 +147,7 @@
 </template>
 
 <script setup lang="ts">
-import { pastor, saurav} from '@/assets/images';
+import {Neuhart, pastor, pastor_andy, saurav} from '@/assets/images';
   import { Button } from '../common';
 import {computed, onMounted, ref} from 'vue';
 
@@ -268,11 +289,27 @@ import { useWindowSize } from '@vueuse/core';
       profile: saurav,
     },
     {
+      quote: 'Mr. Ismael actively participated in lectures, practical exercises, and project work, consistently demonstrating attentiveness, curiosity, and engagement. He asked insightful questions and successfully passed the examinations with good to very good grades.',
+      author: 'Professor Dr. Erwin Neuhart',
+      position: 'Professor of Computer Science at Hochschule Schmalkalden',
+      tags: ['Professor', 'Distributed Systems','Web Development', 'Software Testing'],
+      profile: Neuhart,
+    },
+    {
+      quote: 'Collaborating with Ronney on the Seventh-day Adventist Church website has been an exceptionally rewarding experience. His unwavering dedication, remarkable expertise, and steadfast support were pivotal in bringing this project to fruition',
+      author: 'Pastor Andreas Weber',
+      position: 'Founder of Seventh day Adventist, Herne',
+      tags: ['Pastor', 'Christian'],
+      profile: pastor_andy,
+    },
+    {
       quote: 'Working with Ronney on the Miracle Center Church website has been an exceptional experience. His invaluable support and dedication were crucial in bringing this project to life. Thank you, Ronney!',
       author: 'Pastor Prince Edos',
       position: 'Founder of Miracle Center Church',
-      tags: ['Web Development', 'SEO'],
+      tags: ['Pastor', 'Christian'],
       profile: pastor,
-    },
+    }
+
+
   ];
 </script>

@@ -172,7 +172,7 @@
     {
       name: 'SDA Church',
       category: 'Frontend & Backend',
-      tags: ['Angular', 'Html', 'CSS','Bootstrap','Typescript','Javascript'],
+      tags: ['Angular', 'Html', 'CSS','Bootstrap','Typescript'],
       videoSrc: SDA,
       imageBg: workBg4,
       url: 'https://github.com/ismaeli34/sda-international-herne',
@@ -181,7 +181,7 @@
     {
       name: 'Outfit Orbit ',
       category: 'Frontend & Backend',
-      tags: ['Angular', 'Html', 'Css','Bootstrap', 'Typescript','Java','Springboot'],
+      tags: ['Angular','Bootstrap', 'Typescript','Java','Springboot'],
       videoSrc: OutfitOrbit,
       imageBg: workBg1,
       url: 'https://github.com/ismaeli34/OutfitOrbit',
@@ -190,7 +190,7 @@
     {
       name: 'Hyper Local ',
       category: 'Frontend & Backend',
-      tags: ['React', 'Html', 'Css','Bootstrap', 'Typescript','Java','Springboot'],
+      tags: ['React','Bootstrap', 'Typescript','Java','Springboot'],
       videoSrc: hyperlocal,
       imageBg: workBg1,
       url: 'https://github.com/ismaeli34/hyperlocal-ecommerce-react',

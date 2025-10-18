@@ -89,7 +89,7 @@
               <p
                 class="3xl:text-base block leading-snug font-medium -tracking-tight uppercase"
               >
-                Available for freelance work
+                Available for work & collaboration
               </p>
               <h3
                 class="3xl:heading-1 heading-1-alt font-fancy block leading-none font-bold -tracking-tight"
@@ -114,7 +114,7 @@
   // import { dataCalConfig, dataCalLink, dataCalNamespace } from '@/data';
 
   const whoAmI = ref(
-    'A freelance full-stack developer, cutting-edge technologies to deliver comprehensive solutions for your business.',
+    'A full-stack developer, cutting-edge technologies to deliver comprehensive solutions for your business.',
   );
   const AvailableForWorkDate = ref('');
 
