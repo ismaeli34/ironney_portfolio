@@ -1,18 +1,23 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<urlset xmlns="https://hetari.github.io/portfolio/sitemap/0.9">-->
-<!--    <url>-->
-<!--        <loc>https://hetari.github.io/portfolio</loc>-->
-<!--        <lastmod>2024-08-30</lastmod>-->
-<!--        <priority>1.00</priority>-->
-<!--    </url>-->
-<!--    &lt;!&ndash; <url>-->
-<!--        <loc>https://yourwebsite.com/about</loc>-->
-<!--        <lastmod>2024-08-28</lastmod>-->
-<!--        <priority>0.80</priority>-->
-<!--    </url>-->
-<!--    <url>-->
-<!--        <loc>https://yourwebsite.com/contact</loc>-->
-<!--        <lastmod>2024-08-28</lastmod>-->
-<!--        <priority>0.80</priority>-->
-<!--    </url> &ndash;&gt;-->
-<!--</urlset>-->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://ronneyismael.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ronneyismael.com/#services</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ronneyismael.com/#works</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ronneyismael.com/#about-me-section</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
